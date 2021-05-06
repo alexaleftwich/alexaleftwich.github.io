@@ -32,12 +32,14 @@ var init = function (window) {
 
         // TODO 3 / 7 : Call the drawCircle() function 
           
-        
-        for (var draw = 0; draw < 100; draw++) {
-            //do something
-            drawCircle++
-            drawCircle();
-        }
+        drawCircle()
+        drawCircle()
+        drawCircle()
+        drawCircle()
+
+        ///for (var draw = 0; draw < 100; draw++) {
+            ///drawCircle();///
+        ///}///
            
            
         ////////////////////////////////////////////////////////////
@@ -94,7 +96,7 @@ var init = function (window) {
             }
             if(circle.y < 0)
             {
-                circle.x = canvas.height;
+                circle.y = canvas.height;
             }
             
 
@@ -122,12 +124,5 @@ if((typeof process !== 'undefined') &&
     (typeof process.versions.node !== 'undefined')) {
     // here, export any references you need for tests //
     module.exports = init;
-}
-function newFunction(circle, draw, canvas, physikz, view, circles) {
-    circle = draw.randomCircleInArea(canvas, true, true, '#999', 2);
-    physikz.addRandomVelocity(circle, canvas);
-    view.addChild(circle);
-    circles.push(circle);
-    return circle;
-}
+    }
 
